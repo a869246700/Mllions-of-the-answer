@@ -1,17 +1,20 @@
 import request from './request'
 
-let fns = {
-  async getTuList() {
-    let page = 2
-    let config = {
-      url: '/api/rtimu',
-      params: {
-        page
-      }
+let getTmList = async function () {
+  let page = parseInt(Math.random() * 29)
+  let config = {
+    url: '/api/rtimu',
+    params: {
+      page
     }
-    let { data: res } = await request(config)
-    console.log(res)
   }
+  let {
+    data: res
+  } = await request(config)
+  // console.log(res)
+  return res
 }
 
-export default fns
+export {
+  getTmList
+}

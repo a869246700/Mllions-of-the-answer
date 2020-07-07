@@ -1,0 +1,62 @@
+#dati {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  color: #666;
+  background-color: #fff;
+}
+
+#dati h2 {
+  width: 90%;
+  margin: 20px auto;
+}
+
+#dati .options {
+  height: 400px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+  border-radius: 20px;
+  background-color: #efefef;
+  box-sizing: border-box;
+}
+
+#dati .options .option-item {
+  width: 90%;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 10px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #3bf;
+}
+
+#dati .options .option-item.correct {
+  background-color: lightgreen;
+  color: #fff;
+}
+
+#dati .options .option-item.error {
+  background-color: red;
+  color: #fff
+}
+
+.toast {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0, 0, 0, .7);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.toast span {
+  color: #fff;
+}

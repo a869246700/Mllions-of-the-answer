@@ -7,5 +7,10 @@ export default {
   addNumber(state, action) {
     state.number += action.number
     return state
+  },
+  setQuestion(state, action) {
+    // console.log(action)
+    state.questionList = action.content
+    return state
   }
 }

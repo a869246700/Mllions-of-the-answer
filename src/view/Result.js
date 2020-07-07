@@ -10,36 +10,23 @@ function mapStateToProps(state) {
 // 将修改 state 数据的方法，映射到 props，默认传入 dispatch
 function mapDispatchToProps(dispatch) {
   return {
-    onAddClick: () => {
-      let payload = {
-        type: 'add'
-      }
-      dispatch(payload)
-    },
-    onAddClick5: () => {
-      let payload = {
-        type: 'addNumber',
-        number: 5
-      }
-      dispatch(payload)
-    }
   }
 }
 
 
 class Counter extends React.Component {
   render() {
+    console.log(this.props)
     return (
       <div>
-        <Button onClick={this.handleClickAnswer}>随机答题</Button>
-        <Button onClick={this.handleClickAdd5}>闯关答题</Button>
-        <Button onClick={this.handleClickAdd5}>抽奖答题</Button>
+        <h2>恭喜你获得{this.props.location.state.scroe}分</h2>
+        <Button onClick={this.handleClick}>回到首页</Button>
       </div>
     )
   }
 
-  handleClickAnswer = () => {
-    this.props.history.push('/dati')
+  handleClick = () => {
+    this.props.history.push('/')
   }
   
   handleClickAdd5 = () => {
